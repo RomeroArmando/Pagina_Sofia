@@ -13,7 +13,7 @@ export default function Navbar() {
           alt="Logo" 
           style={{ width: "100px", height: "70px", marginRight: "10px" }} 
         />
-        <Link to="/"><strong>🛍️ Tienda Local</strong></Link>
+        <Link to="/"><strong>🛍️ SUBLIMACION EXPRESS</strong></Link>
       </div>
       <div>
         <Link to="/">Catálogo</Link>

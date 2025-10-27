@@ -1,10 +1,23 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
+
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  //const [cart, setCart] = useState([]);
+
+  // ⚡ Inicializar desde localStorage
+  const [cart, setCart] = useState(() => {
+    const saved = localStorage.getItem("cart");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // ⚡ Guardar en localStorage cada vez que cambia
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
 
   // Añadir producto, por defecto sin talle
   const addToCart = (product) => {
