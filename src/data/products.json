@@ -1,10 +1,10 @@
 [
-  { "id": 1, "nombre": "Remera Corazon (negro)", "precio": 2000, "imagen": "../public/img/black_kokoro.png" }, 
-  { "id": 2, "nombre": "Remera Corazon (blanco)", "precio": 2000, "imagen": "../public/img/corazon.png" },
-  { "id": 3, "nombre": "Remera Gato", "precio": 2000, "imagen": "../public/img/gato.png" },
-  { "id": 4, "nombre": "Remera Love", "precio": 2000, "imagen": "../public/img/kokoro.png" },
-  { "id": 5, "nombre": "Remera Mariposa", "precio": 2000, "imagen": "../public/img/mariposa.png" },
-  { "id": 6, "nombre": "Remera Shine", "precio": 2000, "imagen": "../public/img/shine.png" },
-  { "id": 7, "nombre": "Remera sol", "precio": 2000, "imagen": "../public/img/sun.png" },
-  { "id": 7, "nombre": "Remera Planta", "precio": 2000, "imagen": "../public/img/weed.png" }
+  { "id": 1, "nombre": "Remera Corazon (negro)", "precio": 2000, "imagen": "/img/black_kokoro.png" }, 
+  { "id": 2, "nombre": "Remera Corazon (blanco)", "precio": 2000, "imagen": "/img/corazon.png" },
+  { "id": 3, "nombre": "Remera Gato", "precio": 2000, "imagen": "/img/gato.png" },
+  { "id": 4, "nombre": "Remera Love", "precio": 2000, "imagen": "/img/kokoro.png" },
+  { "id": 5, "nombre": "Remera Mariposa", "precio": 2000, "imagen": "/img/mariposa.png" },
+  { "id": 6, "nombre": "Remera Shine", "precio": 2000, "imagen": "/img/shine.png" },
+  { "id": 7, "nombre": "Remera sol", "precio": 2000, "imagen": "/img/sun.png" },
+  { "id": 7, "nombre": "Remera Planta", "precio": 2000, "imagen": "/img/weed.png" }
 ]
