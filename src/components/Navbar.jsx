@@ -1,24 +1,34 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+
+
 
 export default function Navbar() {
-  const { cart } = useCart();
-  const totalItems = cart.reduce((acc, item) => acc + item.cantidad, 0);
+
+   const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => setIsActive(!isActive);
 
   return (
-    <nav>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <img 
-          src="/logo.jpeg" 
-          alt="Logo" 
-          style={{ width: "100px", height: "70px", marginRight: "10px" }} 
-        />
-        <Link to="/"><strong>🛍️ SUBLIMACION EXPRESS</strong></Link>
+    <nav className="navbar">
+      <div className="logo">
+        <Link to="/">
+          <img src="/logo.jpeg" alt="Logo" />
+        </Link>
       </div>
-      <div>
-        <Link to="/">Catálogo</Link>
-        <Link to="/carrito">Carrito ({totalItems})</Link>
+
+      <ul className={`nav-links ${isActive ? "active" : ""}`} onClick={toggleMenu}>
+        <li><Link to="/">Catálogo</Link></li>
+        <li><Link to="/carrito">Carrito</Link></li>
+      </ul>
+
+      <div className="menu-toggle" id="mobile-menu" onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="menu-text">{isActive ? "Cerrar" : "Menú"}</span>
       </div>
     </nav>
   );
 }
+
+

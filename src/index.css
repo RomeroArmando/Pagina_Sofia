@@ -78,3 +78,136 @@ nav a:hover {
   justify-content: center;
   gap: 20px;
 }
+
+/* Navbar general */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.navbar .logo img {
+  height: 50px;
+}
+
+/* Links del navbar */
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #25d366; /* Verde WhatsApp */
+}
+
+/* Menu hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive: móvil */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: #ffffff;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    transition: height 0.3s ease;
+  }
+
+  .nav-links.active {
+    height: 150px; /* Ajustar según cantidad de links */
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    transition: height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.nav-links.active {
+    height: 150px; /* ya existente, ajustar según cantidad de links */
+    opacity: 1;
+}
+
+.nav-links {
+    flex-direction: column; /* ya estaba */
+    align-items: center;    /* centra los links horizontalmente */
+    justify-content: center; /* centra los links verticalmente */
+    gap: 15px;              /* espacio entre los links */
+    padding: 20px 0;        /* espacio arriba y abajo */
+  }
+
+  .nav-links li a {
+    font-size: 18px;        /* un tamaño más grande para móvil */
+    text-align: center;     /* centrar el texto */
+    width: 100%;            /* ocupa todo el ancho del menú */
+  }
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle .bar {
+  transition: all 0.3s ease;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrar las barras y el texto */
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .menu-text {
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover .menu-text {
+  color: #000000; /* verde WhatsApp para efecto hover */
+}
