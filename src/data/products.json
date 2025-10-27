@@ -1,0 +1,5 @@
+[
+  { "id": 1, "nombre": "Remera Negra", "precio": 5000, "imagen": "/remera-negra.jpg" },
+  { "id": 2, "nombre": "Gorra Azul", "precio": 3500, "imagen": "/gorra-azul.jpg" },
+  { "id": 3, "nombre": "Taza Blanca", "precio": 2500, "imagen": "/taza-blanca.jpg" }
+]
